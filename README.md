@@ -3,6 +3,7 @@
 진행 상황
 1. Docker Container에 Arcus, Arcus-Memcached를 띄웠다. [Admin, memcached-1, memcached-2, memcached-3]
   docker에서 ruo91/arcus image를 이용해서 4개의 컨테이너를 구축한다.
+  
   arcus-admin:/opt/arcus/scripts 에서
   ```
   ./build.sh
