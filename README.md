@@ -50,10 +50,18 @@
   ```
   그리고, helloarcustest.java에서 ip 주소는 arcus-admin이 아닌 arcus-memcached 주소를 등록하니 잘 돌아갔다.
   
+3. I made 3 tables in my mysql server, 'Profile', 'Relationship' and 'Thoughts'(writings). These would be used to test the differences between mysql-only and arcus used services. This test will query the 10 latest writings of my friends. The query statement looks like below. It will take quite a long time, which would make a dramatic difference when using a cache. Also, it fits to current db usage of social network services.
+```
+select * from thoughts where writer in
+  (select account2 from relationship where account1=
+    (select account_num from profile where account='sr')
+  and follows='true')
+order by time desc limit 10
+```
+
 
 다음 할 일
-1. 웹서버를 만들어 기본적인 get, post를 처리할 수 있도록 한다.
-  
+1. tomcat 서블릿 작성을 해보고 mysql, arcus와 연결이 가능하도록 한다.
 2. nGrinder를 웹서버와 연결해서 stress test를 진행한다.
 3. mySql만 사용한 경우와, arcus까지 사용한 경우를 비교한다.
 4. 비슷한 방식으로 nbase-arc를 사용한 경우와도 비교한다.
