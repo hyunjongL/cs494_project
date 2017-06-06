@@ -59,10 +59,10 @@ select * from thoughts where writer in
 order by time desc limit 10
 ```
 4. I connected my server to mysql successfully, and got the responsce for my query.
-![alt text](https://github.com/hyunjongL/cs494_project/blob/master/mysql.png)
+![opened in chrome](https://github.com/hyunjongL/cs494_project/blob/master/mysql.png)
 
 다음 할 일
-1. tomcat 서블릿 작성을 해보고 mysql, arcus와 연결이 가능하도록 한다.
+1. arcus와 연결이 가능하도록 한다.
 2. nGrinder를 웹서버와 연결해서 stress test를 진행한다.
 3. mySql만 사용한 경우와, arcus까지 사용한 경우를 비교한다.
 4. 비슷한 방식으로 nbase-arc를 사용한 경우와도 비교한다.
