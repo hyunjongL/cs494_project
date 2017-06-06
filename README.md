@@ -58,6 +58,7 @@ select * from thoughts where writer in
   and follows='true')
 order by time desc limit 10
 ```
+4. I connected my server to mysql successfully, and got the responsce for my query.
 
 
 다음 할 일
