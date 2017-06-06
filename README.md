@@ -59,7 +59,7 @@ select * from thoughts where writer in
 order by time desc limit 10
 ```
 4. I connected my server to mysql successfully, and got the responsce for my query.
-
+![alt text](https://github.com/hyunjongL/cs494_project/blob/master/mysql.png)
 
 다음 할 일
 1. tomcat 서블릿 작성을 해보고 mysql, arcus와 연결이 가능하도록 한다.
