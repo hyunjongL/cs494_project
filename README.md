@@ -67,3 +67,7 @@ order by time desc limit 10
 3. mySql만 사용한 경우와, arcus까지 사용한 경우를 비교한다.
 4. 비슷한 방식으로 nbase-arc를 사용한 경우와도 비교한다.
 
+
+Contributions while building project
+https://github.com/naver/ngrinder/wiki/_history
+nGrinder wiki: markdown syntax corrected
