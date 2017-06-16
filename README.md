@@ -1,6 +1,14 @@
 # cs494_project
 
 진행 상황
+0. Use Docker
+ I used docker to generate Mysql, arcus-admin and arcus-memcached containers.
+ Each had IPAddresses 172.17.0.2 ~ 172.17.0.x
+ Tomcat server had several problems with oracle java and dependency problems with arcus, so tomcat server was on localhost.
+ As the tomcat server was on localhost, Ngrinder couldn't access the webpage from inside the docker container.
+ So, the Ngrinder was built on localhost also.
+ 
+
 1. Docker Container에 Arcus, Arcus-Memcached를 띄웠다. [Admin, memcached-1, memcached-2, memcached-3]
   docker에서 ruo91/arcus image를 이용해서 4개의 컨테이너를 구축한다.
   
@@ -73,7 +81,7 @@ https://github.com/naver/arcus-java-client/blob/master/docs/arcus-java-client-ge
 
 5. I Used Ngrinder to check my webserver's TPS.
 ![NgrinderUsage](./screenshots/ngrinder.png)
-
+stresstest.py is the script used for stress testing
 
 다음 할 일
 1. arcus와 연결이 가능하도록 한다. x
