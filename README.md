@@ -83,12 +83,14 @@ https://github.com/naver/arcus-java-client/blob/master/docs/arcus-java-client-ge
 
 
 5. I Used Ngrinder to check my webserver's TPS.
+
 ![NgrinderUsage](./screenshots/ngrinder.png)
 stresstest.py is the script used for stress testing
 So, the test took very long as I had expected. Unfortunately, this would have shown big difference when I used arcus, however I was not able to connect it to my server.
 Still, it was quite self-explanatory that only using mysql as a database would be very slow.
 
 6. Using Arcus
+
  I have planned to use arcus as following
  Person A using this SNS. 
  A requests for 10 writings of A's friends.
