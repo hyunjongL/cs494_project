@@ -89,17 +89,17 @@ So, the test took very long as I had expected. Unfortunately, this would have sh
 Still, it was quite self-explanatory that only using mysql as a database would be very slow.
 
 6. Using Arcus
-I have planned to use arcus as following
-Person A using this SNS.
-A requests for 10 writings of A's friends.
-NOW: Queries who A follows -> Queries writing whose author is 'who A follows' -> limit by 10 and order by time
-With arcus 
--> CHECK ARCUS if it has following list of A
-  ->if there is no cache, query mysql for followers and cache it.
--> CHECK ARCUS for writings whose writer is 'who A follows'
-  -> if there is no writings up to 10, query mysql to search more writings.
+ I have planned to use arcus as following
+ Person A using this SNS. 
+ A requests for 10 writings of A's friends.
+ NOW: Queries who A follows -> Queries writing whose author is 'who A follows' -> limit by 10 and order by time
+ With arcus 
+ -> CHECK ARCUS if it has following list of A
+   ->if there is no cache, query mysql for followers and cache it.
+ -> CHECK ARCUS for writings whose writer is 'who A follows'
+   -> if there is no writings up to 10, query mysql to search more writings.
 
-Also, all new writings must be cached for up to 10 days, and up to 10000(estimate) writings can be cached.
+ Also, all new writings must be cached for up to 10 days, and up to 10000(estimate) writings can be cached.
 
 다음 할 일
 1. arcus와 연결이 가능하도록 한다. x
