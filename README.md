@@ -71,12 +71,15 @@ The index.jsp is my sourecode for tomcat server. It is used to query to mysql(wh
 https://github.com/naver/arcus-java-client/blob/master/docs/arcus-java-client-getting-started.md
 
 
+5. I Used Ngrinder to check my webserver's TPS.
+![NgrinderUsage](./screenshots/ngrinder.png)
+
 
 다음 할 일
-1. arcus와 연결이 가능하도록 한다.
-2. nGrinder를 웹서버와 연결해서 stress test를 진행한다.
-3. mySql만 사용한 경우와, arcus까지 사용한 경우를 비교한다.
-4. 비슷한 방식으로 nbase-arc를 사용한 경우와도 비교한다.
+1. arcus와 연결이 가능하도록 한다. x
+2. nGrinder를 웹서버와 연결해서 stress test를 진행한다. o
+3. mySql만 사용한 경우와, arcus까지 사용한 경우를 비교한다. -
+4. 비슷한 방식으로 nbase-arc를 사용한 경우와도 비교한다. -
 
 *Arcus will not respond to my tomcat server. I tried to resolve this for several weeks.(Contacting arcus maintainer or restarting the project from the start) However, None worked.*
 
