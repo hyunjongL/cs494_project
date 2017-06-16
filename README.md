@@ -63,6 +63,13 @@ order by time desc limit 10
 4. I connected my server to mysql successfully, and got the responsce for my query.
 ![opened in chrome](https://github.com/hyunjongL/cs494_project/blob/master/mysql.png)
 
+The index.jsp is my sourecode for tomcat server. It is used to query to mysql(which is successful) and try to connect to arcus. The arcus codes are currently copied from "arcus-java-client test".
+
+
+https://github.com/naver/arcus-java-client/blob/master/docs/arcus-java-client-getting-started.md
+
+
+
 다음 할 일
 1. arcus와 연결이 가능하도록 한다.
 2. nGrinder를 웹서버와 연결해서 stress test를 진행한다.
