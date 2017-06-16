@@ -1,6 +1,17 @@
 # cs494_project
 
+Writing Korean is a bit buggy, so I wrote most in english.
+
 진행 상황
+
+0. Use Docker
+ I used docker to generate Mysql, arcus-admin and arcus-memcached containers.
+ Each had IPAddresses 172.17.0.2 ~ 172.17.0.x
+ Tomcat server had several problems with oracle java and dependency problems with arcus, so tomcat server was on localhost.
+ As the tomcat server was on localhost, Ngrinder couldn't access the webpage from inside the docker container.
+ So, the Ngrinder was built on localhost also.
+ 
+
 1. Docker Container에 Arcus, Arcus-Memcached를 띄웠다. [Admin, memcached-1, memcached-2, memcached-3]
   docker에서 ruo91/arcus image를 이용해서 4개의 컨테이너를 구축한다.
   
@@ -72,8 +83,30 @@ https://github.com/naver/arcus-java-client/blob/master/docs/arcus-java-client-ge
 
 
 5. I Used Ngrinder to check my webserver's TPS.
-![NgrinderUsage](./screenshots/ngrinder.png)
 
+![NgrinderUsage](./screenshots/ngrinder.png)
+stresstest.py is the script used for stress testing
+So, the test took very long as I had expected. Unfortunately, this would have shown big difference when I used arcus, however I was not able to connect it to my server.
+Still, it was quite self-explanatory that only using mysql as a database would be very slow.
+
+6. Using Arcus
+
+ I have planned to use arcus as following
+ 
+ Person A using this SNS. 
+ A requests for 10 writings of A's friends.
+ 
+ NOW: Queries who A follows -> Queries writing whose author is 'who A follows' -> limit by 10 and order by time
+ 
+ With arcus 
+ 
+ -> CHECK ARCUS if it has following list of A
+   ->if there is no cache, query mysql for followers and cache it.
+   
+ -> CHECK ARCUS for writings whose writer is 'who A follows'
+   -> if there is no writings up to 10, query mysql to search more writings.
+
+ Also, all new writings must be cached for up to 10 days, and up to 10000(estimate) writings can be cached.
 
 다음 할 일
 1. arcus와 연결이 가능하도록 한다. x
@@ -88,9 +121,10 @@ Contributions while building project
 
 https://github.com/naver/ngrinder/wiki/_history
 -The codes were out of the code section of markdown.
-I corrected the code sections so the readers can read the wiki comfortably-
+I corrected the code sections so the readers can read the wiki comfortably
 
 https://github.com/naver/nbase-arc/graphs/contributors
--Corrected typos in the readme
+*-Corrected typos in the readme
+
 
 nGrinder wiki: markdown syntax corrected
