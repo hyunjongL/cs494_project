@@ -65,7 +65,9 @@ Writing Korean is a bit buggy, so I wrote most in english.
   그리고, helloarcustest.java에서 ip 주소는 arcus-admin이 아닌 arcus-memcached 주소를 등록하니 잘 돌아갔다.
   ![arcus-mvn-test](./screenshots/arcus-test-build.png)
   
-3. I made 3 tables in my mysql server, 'Profile', 'Relationship' and 'Thoughts'(writings). These would be used to test the differences between mysql-only and arcus used services. This test will query the 10 latest writings of my friends. The query statement looks like below. It will take quite a long time, which would make a dramatic difference when using a cache. Also, it fits to current db usage of social network services.
+3. I made 3 tables in my mysql server, 'Profile', 'Relationship' and 'Thoughts'(writings). 
+
+These would be used to test the differences between mysql-only and arcus used services. This test will query the 10 latest writings of my friends. The query statement looks like below. It will take quite a long time, which would make a dramatic difference when using a cache. Also, it fits to current db usage of social network services.
 ```
 select * from thoughts where writer in
   (select account2 from relationship where account1=
