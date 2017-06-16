@@ -72,7 +72,7 @@ These would be used to test the differences between mysql-only and arcus used se
 relationship : id 1 follows id 2 if follows=true
 
 ![mysql_show_table](./screenshots/mysql_show_table.png)
-![mysql_workbench](./screenshots/mysql_workbench.png)
+![mysql_workbench](./screenshots/mysql_workbench.png)(width=100)
 ```
 select * from thoughts where writer in
   (select account2 from relationship where account1=
