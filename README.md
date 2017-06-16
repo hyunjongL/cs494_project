@@ -92,12 +92,17 @@ Still, it was quite self-explanatory that only using mysql as a database would b
 6. Using Arcus
 
  I have planned to use arcus as following
+ 
  Person A using this SNS. 
  A requests for 10 writings of A's friends.
+ 
  NOW: Queries who A follows -> Queries writing whose author is 'who A follows' -> limit by 10 and order by time
+ 
  With arcus 
+ 
  -> CHECK ARCUS if it has following list of A
    ->if there is no cache, query mysql for followers and cache it.
+   
  -> CHECK ARCUS for writings whose writer is 'who A follows'
    -> if there is no writings up to 10, query mysql to search more writings.
 
