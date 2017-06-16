@@ -23,6 +23,7 @@
   ./arcus.sh memcached list (your_service_code)
   ```
   를 실행한다.
+  ![arcus-list](./screenshots/arcus-list-cloud.png)
   
 2. Arcus Java Client에서 maven을 이용한 테스트에 통과하였다.
   같은 ruo91/arcus image에서 시작하였다.
@@ -49,6 +50,7 @@
   </build>
   ```
   그리고, helloarcustest.java에서 ip 주소는 arcus-admin이 아닌 arcus-memcached 주소를 등록하니 잘 돌아갔다.
+  ![arcus-mvn-test](./screenshots/arcus-test-build.png)
   
 3. I made 3 tables in my mysql server, 'Profile', 'Relationship' and 'Thoughts'(writings). These would be used to test the differences between mysql-only and arcus used services. This test will query the 10 latest writings of my friends. The query statement looks like below. It will take quite a long time, which would make a dramatic difference when using a cache. Also, it fits to current db usage of social network services.
 ```
@@ -67,9 +69,12 @@ order by time desc limit 10
 3. mySql만 사용한 경우와, arcus까지 사용한 경우를 비교한다.
 4. 비슷한 방식으로 nbase-arc를 사용한 경우와도 비교한다.
 
+*Arcus will not respond to my tomcat server. I tried to resolve this for several weeks.(Contacting arcus maintainer or restarting the project from the start) However, None worked.*
 
+--------------------------------------------------------------------------
 Contributions while building project
 
 https://github.com/naver/ngrinder/wiki/_history
+https://github.com/naver/nbase-arc/graphs/contributors
 
 nGrinder wiki: markdown syntax corrected
