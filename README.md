@@ -75,7 +75,10 @@ order by time desc limit 10
 Contributions while building project
 
 https://github.com/naver/ngrinder/wiki/_history
+-The codes were out of the code section of markdown.
+I corrected the code sections so the readers can read the wiki comfortably-
 
 https://github.com/naver/nbase-arc/graphs/contributors
+-Corrected typos in the readme
 
 nGrinder wiki: markdown syntax corrected
