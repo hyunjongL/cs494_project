@@ -3,6 +3,7 @@
 Writing Korean is a bit buggy, so I wrote most in english.
 
 진행 상황
+
 0. Use Docker
  I used docker to generate Mysql, arcus-admin and arcus-memcached containers.
  Each had IPAddresses 172.17.0.2 ~ 172.17.0.x
