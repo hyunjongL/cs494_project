@@ -68,6 +68,8 @@ Writing Korean is a bit buggy, so I wrote most in english.
 3. I made 3 tables in my mysql server, 'Profile', 'Relationship' and 'Thoughts'(writings). 
 
 These would be used to test the differences between mysql-only and arcus used services. This test will query the 10 latest writings of my friends. The query statement looks like below. It will take quite a long time, which would make a dramatic difference when using a cache. Also, it fits to current db usage of social network services.
+![mysql_show_table](./screenshots/mysql_show_table.png)
+![mysql_workbench](./screenshots/mysql_workbench.png)
 ```
 select * from thoughts where writer in
   (select account2 from relationship where account1=
